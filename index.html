@@ -414,6 +414,65 @@
                 flex-direction: column;
             }
         }
+
+        /* --- Раздел "Отзывы" --- */
+        .testimonials-section {
+            background-color: #f9f9f9; /* Светло-серый фон */
+        }
+
+        .testimonials-grid {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap; /* Для адаптивности на мобильных */
+        }
+
+        .testimonial-card {
+            background-color: var(--white-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px var(--shadow-color);
+            text-align: center;
+            max-width: 350px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .client-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid var(--primary-color);
+        }
+
+        .client-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        /* Адаптивность для отзывов */
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .testimonial-card {
+                max-width: 90%; /* Увеличиваем ширину карточек на мобильных */
+            }
+        }
     </style>
 </head>
 <body>
@@ -503,6 +562,30 @@
                         <div class="portfolio-overlay">
                              <span class="portfolio-overlay-text">Детская фотосессия</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел "Отзывы" -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2>Что говорят мои клиенты</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/100x100" alt="Фото клиента Мария Катияр" class="client-photo">
+                        <h3 class="client-name">Мария Катияр</h3>
+                        <p class="testimonial-text">"Я очень довольна фотосессией, проводили в студии. У меня получились шикарные портреты."</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/100x100" alt="Фото клиентов Анна и Дмитрий" class="client-photo">
+                        <h3 class="client-name">Анна и Дмитрий</h3>
+                        <p class="testimonial-text">"Это была наша первая семейная съемка, и мы в восторге! Фотографии получились очень живыми и естественными."</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/100x100" alt="Фото клиента Екатерина" class="client-photo">
+                        <h3 class="client-name">Екатерина</h3>
+                        <p class="testimonial-text">"Спасибо за прекрасные свадебные фотографии! Каждый кадр идеально передает атмосферу нашего дня."</p>
                     </div>
                 </div>
             </div>
